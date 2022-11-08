@@ -24,6 +24,7 @@ PKG_DOCS_DISTRO_COMPAT="
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-main
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
+z|https://http.us.debian.org/debian/dists/bullseye-backports/main/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-bullseye-backports-main
 "
 
 #-------------------
@@ -35,9 +36,12 @@ z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binar
 #   3 - name of db-file(s) associated with that repo. it may have glob wildcards.
 
 REPOS_DISTRO_COMPAT="
-z|https://http.us.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
-z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
-z|https://ftp.de.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
+z|https://http.us.debian.org/debian|Packages-debian-bullseye-backports-*
+z|https://mirrors.kernel.org/debian|Packages-debian-bullseye-backports-*
+z|https://ftp.de.debian.org/debian|Packages-debian-bullseye-backports-*
+z|https://http.us.debian.org/debian|Packages-debian-bullseye-backports-*
+z|https://mirrors.kernel.org/debian|Packages-debian-bullseye-backports-*
+z|https://ftp.de.debian.org/debian|Packages-debian-bullseye-backports-*
 "
 
 
