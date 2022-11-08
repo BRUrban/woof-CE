@@ -109,7 +109,7 @@ yes|libevent|libevent-dev|exe,dev,doc,nls||deps:yes #needed by transmission.
 yes|libfuse2|libfuse2|exe,dev,doc,nls||deps:yes # used by AppImages
 yes|libgcrypt|libgcrypt20,libgcrypt20-dev|exe,dev,doc,nls||deps:yes # needed by weechat
 yes|libgtk-layer-shell|libgtk-layer-shell-dev|exe,dev,doc,nls||deps:yes
-yes|libigdgmm-dev|libigdgmm-dev|exe,dev,doc,nls||deps:yes
+yes|libigdgmm12|libigdgmm12|exe,dev,doc,nls||deps:yes
 yes|libjpeg62|libjpeg62-turbo,libjpeg62-turbo-dev,libjpeg-dev|exe,dev,doc,nls||deps:yes
 yes|libmpfr|libmpfr6|exe,dev,doc,nls||deps:yes
 yes|libnatpmp|libnatpmp1,libnatpmp-dev|exe,dev,doc,nls||deps:yes #needed by transmission.
