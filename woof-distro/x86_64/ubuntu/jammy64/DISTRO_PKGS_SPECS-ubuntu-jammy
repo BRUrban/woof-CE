@@ -690,4 +690,6 @@ yes|zip|zip|exe,dev>null,doc,nls||deps:yes
 yes|zlib|zlib1g,zlib1g-dev|exe,dev,doc,nls||deps:yes
 yes|zstd|zstd|exe,dev,doc,nls||deps:yes
 no|zzznet||exe
+yes|barrier|barrier|exe,dev,doc,nls||deps:yes
+yes|vim|vim|exe,dev,doc,nls||deps:yes
 '
