@@ -42,7 +42,7 @@ function trust_server
   openssl req -x509 -nodes -days 365 -subj /CN=barrier -newkey rsa:4096 -keyout /root/.local/share/barrier/SSL/Barrier.pem -out /root/.local/share/barrier/SSL/Barrier.pem
   openssl x509 -fingerprint -sha1 -noout -in /root/.local/share/barrier/SSL/Barrier.pem > $finger_dir/Local.txt
   echo "Getting $BARRIER_SERVER fingerprint and storing into TrustedServer.txt"
-  echo -n | openssl s_client -connect $BARRIER_SERVER 2> /dev/null | openssl x509 -noout -fingerprint | cut -f2 -d'=' > $TRUSTED
+  echo -n | openssl s_client -connect $BARRIER_SERVER 2> /dev/null | openssl x509 -sha256 -noout -fingerprint | cut -f2 -d'=' | sed '1s/^/v2:sha256:/'> $TRUSTED
   if [ $? -eq 0 ]; then
     echo "updated: $TRUSTED with"
     cat $TRUSTED
