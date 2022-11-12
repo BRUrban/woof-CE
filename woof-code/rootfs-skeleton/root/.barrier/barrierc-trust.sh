@@ -37,6 +37,10 @@ function trust_server
   else
     echo "Verified ability to connect to $SERVER at port $PORT"
   fi
+  #Probably wrap the Barrier.pem generation stuff in conditionals too, check for file existence etc.
+  echo "Generating Barrier.pem"
+  openssl req -x509 -nodes -days 365 -subj /CN=barrier -newkey rsa:4096 -keyout /root/.local/share/barrier/SSL/Barrier.pem -out /root/.local/share/barrier/SSL/Barrier.pem
+  openssl x509 -fingerprint -sha1 -noout -in /root/.local/share/barrier/SSL/Barrier.pem > $finger_dir/Local.txt
   echo "Getting $BARRIER_SERVER fingerprint and storing into TrustedServer.txt"
   echo -n | openssl s_client -connect $BARRIER_SERVER 2> /dev/null | openssl x509 -noout -fingerprint | cut -f2 -d'=' > $TRUSTED
   if [ $? -eq 0 ]; then
