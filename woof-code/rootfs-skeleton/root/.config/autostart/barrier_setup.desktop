@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Barrier
+Exec=/root/my-applications/bin/barrier_setup.sh
+Terminal=true
